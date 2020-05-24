@@ -21,4 +21,17 @@ git 分布式版本控制系统
 13.工作区（当前文件夹目录） 利用add将文件提交到版本库  版本库：暂存区（stage）、分支（master） //第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
 14.git管理的是修改，而非文件  例如：第一次修改 -> git add -> 第二次修改 -> git commit  //第二次修改未提交
 									第一次修改 -> git add -> 第二次修改 -> git add -> git commit  //此时第二次修改后的提交
-15.查看工作区和版本库里面最新版本的区别  git diff HEAD -- readme.txt									
+15.查看工作区和版本库里面最新版本的区别  git diff HEAD -- readme.txt
+16.撤销修改  第一类：工作区的修改，还未提交到暂存区 git checkout -- readme.md
+			 第二类：工作区的修改，已经提交到暂存区 git reset HEAD readme.md  //此时回到了第一类，接着按照第一类做法
+			 第三类：已经提交了不合适的修改到版本库 git reset --hard commit_id
+
+
+
+
+
+
+
+
+
+									
