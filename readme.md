@@ -25,6 +25,11 @@ git 分布式版本控制系统
 16.撤销修改  第一类：工作区的修改，还未提交到暂存区 git checkout -- readme.md
 			 第二类：工作区的修改，已经提交到暂存区 git reset HEAD readme.md  //此时回到了第一类，接着按照第一类做法
 			 第三类：已经提交了不合适的修改到版本库 git reset --hard commit_id
+17.删除文件 rm TestDelete.txt
+18.提交删除操作 git rm TestDelete.txt
+				git commit -m "remove TestDelete.txt"
+19.把误删的文件恢复到最新版本 git checkout -- TestDelete.txt  //git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”，注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！ 这种方式针对没有提交过的删除操作，针对已经提交过的删除操作，需要使用版本回退功能
+
 
 
 
