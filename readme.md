@@ -29,8 +29,14 @@ git 分布式版本控制系统
 18.提交删除操作 git rm TestDelete.txt
 				git commit -m "remove TestDelete.txt"
 19.把误删的文件恢复到最新版本 git checkout -- TestDelete.txt  //git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”，注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！ 这种方式针对没有提交过的删除操作，针对已经提交过的删除操作，需要使用版本回退功能
-
-
+20.远程仓库设置操作
+	第1步：创建SSH Key  $ ssh-keygen -t rsa -C "youremail@example.com"
+	第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+21.添加远程仓库
+	首先，登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库
+	把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库
+		$ git remote add origin git@github.com:michaelliao/learngit.git  //请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，远程库的名字就是origin，这是Git默认的叫法
+		$ git push -u origin master  //把本地库的所有内容推送到远程库上，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
 
 
 
