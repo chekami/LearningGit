@@ -45,6 +45,7 @@ git 分布式版本控制系统
 	创建+切换分支：git checkout -b <name>或者git switch -c <name>
 	合并某分支到当前分支：git merge <name>
 	删除分支：git branch -d <name>
+	看到分支合并图：git log --graph
 
 
 
