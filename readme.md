@@ -38,7 +38,13 @@ git 分布式版本控制系统
 		$ git remote add origin git@github.com:michaelliao/learngit.git  //请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，远程库的名字就是origin，这是Git默认的叫法
 		$ git push -u origin master  //把本地库的所有内容推送到远程库上，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
 22.从远程库克隆  $ git clone git@github.com:michaelliao/gitskills.git
-	
+23.创建与合并分支
+	创建分支：git branch <name>
+	查看分支：git branch
+	切换分支：git checkout <name>或者git switch <name>  //switch方式只能在最新版的git中使用
+	创建+切换分支：git checkout -b <name>或者git switch -c <name>
+	合并某分支到当前分支：git merge <name>
+	删除分支：git branch -d <name>
 
 
 
