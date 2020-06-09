@@ -37,7 +37,8 @@ git 分布式版本控制系统
 	把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库
 		$ git remote add origin git@github.com:michaelliao/learngit.git  //请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，远程库的名字就是origin，这是Git默认的叫法
 		$ git push -u origin master  //把本地库的所有内容推送到远程库上，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
-
+22.从远程库克隆  $ git clone git@github.com:michaelliao/gitskills.git
+	
 
 
 
