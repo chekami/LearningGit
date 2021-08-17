@@ -54,6 +54,8 @@ git 分布式版本控制系统
     2、变基并提交
 	$ git rebase origin
 	2、等价操作
+	$ git checkout master
+	$ git pull
 	$ git checkout mywork
 	$ git rebase origin
 	
