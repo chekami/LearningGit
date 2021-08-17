@@ -47,7 +47,16 @@ git 分布式版本控制系统
 	删除分支：git branch -d <name>
 	看到分支合并图：git log --graph
 
-
+24.分支变基
+	将分支的基变到master最新的提交上，避免分支线过于复杂
+	1、切换到要提交的分支
+	$ git checkout mywork
+    2、变基并提交
+	$ git rebase origin
+	2、等价操作
+	$ git checkout mywork
+	$ git rebase origin
+	
 
 
 
