@@ -57,7 +57,7 @@ git 分布式版本控制系统
 	$ git checkout master
 	$ git pull
 	$ git checkout mywork
-	$ git rebase origin
+	$ git push
 	
 
 
