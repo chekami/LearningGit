@@ -59,7 +59,35 @@ git 分布式版本控制系统
 	$ git pull
 	$ git checkout mywork
 	$ git merge master
-	
+
+25. 存储不想提交的修改，包括当前工作空间的状态
+	1. stash当前修改 
+    $ git stash save "test-cmd-stash"
+	2. 查看现有stash 
+    $ git stash list
+	3. 重新应用缓存的stash
+    $ git stash apply  //用了之后不删除储存
+    $ git stash pop  //用了之后删除储存
+	4. 移除stash
+    $ git stash drop stash@{0}
+	5. 查看指定stash的diff
+    $ git stash show  //后面加上名字，查看指定stash，后面再加上-p查看具体不同
+	6. 从stash创建分支
+    $ git stash branch testchanges
+	   
+26. 下载代码之后，新建分支修改，最后提交的流程常用命令
+	1.新建分支并切换到新建分支
+	git checkout -b 474113-populate-faultcode-with-primaryKey-secondaryKey
+	2.新建分支修改完成后，commit提交
+	git add .
+	git commit -m "some discription"
+	3.切换到主分支，并拉取最新代码
+	git checkout master
+	git pull
+	4.切换到新建分支，rebase合并主分支，并提交到远程仓库
+	git checkout 474113-populate-faultcode-with-primaryKey-secondaryKey
+	git rebase master
+	git push
 
 
 
