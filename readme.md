@@ -88,6 +88,8 @@ git 分布式版本控制系统
 	git checkout 474113-populate-faultcode-with-primaryKey-secondaryKey
 	git rebase master
 	git push
+	
+27. extract test(wrong code)
 
 
 
